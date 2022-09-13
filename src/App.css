@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+body{
+  height: calc(100vh - 8em);
+  /* padding: 4em; */
+  /* color: rgba(255,255,255,.75); */
+  /* font-family: 'Anonymous Pro', monospace;   */
+  /* background-color: rgb(25,25,25);   */
+}
+.line-1{
+    position: relative;
+    /* top: 50%;   */
+    width: 20em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    /* transform: translateY(-50%);     */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 16em;}
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
